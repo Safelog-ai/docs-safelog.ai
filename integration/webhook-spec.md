@@ -3,6 +3,7 @@ layout: default
 title: Webhook Specification
 parent: Integration
 nav_order: 2
+permalink: /integration/webhook-spec/
 ---
 
 # Safelog.ai Partner Webhook Specification

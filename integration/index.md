@@ -3,6 +3,7 @@ layout: default
 title: Integration
 nav_order: 2
 has_children: true
+permalink: /integration/
 ---
 
 # Integration

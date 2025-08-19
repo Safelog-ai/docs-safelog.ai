@@ -3,6 +3,7 @@ layout: default
 title: Partner Integration Guide
 parent: Integration
 nav_order: 1
+permalink: /integration/partner-integration/
 ---
 
 # Partner Integration Guide - Safelog.ai Background Check Forms
