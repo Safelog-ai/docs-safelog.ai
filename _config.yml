@@ -1,7 +1,7 @@
 # GitHub Pages Jekyll Configuration
 title: Safelog.ai Documentation
 description: Complete documentation for Safelog.ai background check integration
-baseurl: "/web-safelog.ai" # Repository name
+baseurl: "/docs-safelog.ai" # Repository name
 url: "https://safelog-ai.github.io" # GitHub Pages URL
 
 # Theme
