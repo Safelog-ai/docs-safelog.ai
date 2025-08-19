@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <style>
+      .sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+        padding: 20px;
+        overflow-y: auto;
+      }
+      .main-content {
+        margin-left: 270px;
+        padding: 20px;
+      }
+      .sidebar h3 {
+        color: #495057;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+      .sidebar li {
+        margin: 5px 0;
+      }
+      .sidebar a {
+        color: #6c757d;
+        text-decoration: none;
+        display: block;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      .sidebar a:hover {
+        background-color: #e9ecef;
+        color: #495057;
+      }
+      .sidebar a.active {
+        background-color: #007bff;
+        color: white;
+      }
+      .logo {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+        .main-content {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">📋 Safelog.ai Docs</div>
+      
+      <h3>Getting Started</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>Overview</a></li>
+      </ul>
+
+      <h3>Integration</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/integration/" {% if page.url contains "/integration/" and page.url == "/integration/" %}class="active"{% endif %}>Introduction</a></li>
+        <li><a href="{{ site.baseurl }}/integration/partner-integration/" {% if page.url contains "partner-integration" %}class="active"{% endif %}>Partner Integration Guide</a></li>
+        <li><a href="{{ site.baseurl }}/integration/webhook-spec/" {% if page.url contains "webhook-spec" %}class="active"{% endif %}>Webhook Specification</a></li>
+      </ul>
+
+      <h3>Support</h3>
+      <ul>
+        <li><a href="mailto:support@safelog.ai">Contact Support</a></li>
+        <li><a href="https://status.safelog.ai" target="_blank">Status Page</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="wrapper">
+        <header>
+          {% if site.github.is_project_page %}
+            <p class="view"><a href="{{ site.github.repository_url }}">View on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+          {% endif %}
+        </header>
+
+        <section>
+          {{ content }}
+        </section>
+
+        <footer>
+          {% if site.github.is_project_page %}
+          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+          {% endif %}
+          <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>

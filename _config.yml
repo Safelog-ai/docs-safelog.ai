@@ -1,0 +1,70 @@
+# GitHub Pages Jekyll Configuration
+title: Safelog.ai Documentation
+description: Complete documentation for Safelog.ai background check integration
+baseurl: "/web-safelog.ai" # Repository name
+url: "https://safelog-ai.github.io" # GitHub Pages URL
+
+# Theme
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Integration
+    url: /integration/
+    subitems:
+      - title: Partner Integration
+        url: /integration/partner-integration/
+      - title: Webhook Specification
+        url: /integration/webhook-spec/
+
+# Sidebar configuration
+sidebar:
+  - title: Getting Started
+    items:
+      - title: Overview
+        url: /
+  - title: Integration
+    items:
+      - title: Partner Integration Guide
+        url: /integration/partner-integration/
+      - title: Report File Webhook
+        url: /integration/webhook-spec/
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  integration:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_integration"
+      type: "integration"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
